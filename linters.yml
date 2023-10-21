@@ -1,0 +1,22 @@
+webhint:
+  extends: "@wehint/configuration-web-recommended"
+
+eslint:
+  extends:
+    - "eslint:recommended"
+    - "plugin:react/recommended"
+  plugins:
+    - "react"
+  env:
+    browser: true
+    node: true
+  rules:
+    semi: ["error", "always"]
+    quotes: ["error", "double"]
+
+stylelint:
+  extends: "stylelint-config-standard"
+  rules:
+    indentation: 2
+    declaration-block-trailing-semicolon: "always"
+    selector-pseudo-element-colon-notation: "double"

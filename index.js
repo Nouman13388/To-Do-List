@@ -1,5 +1,5 @@
 var btn_click = document.getElementById("add-btn");
-btn_click.addEventListener("click", function() {
+btn_click.addEventListener("click", ()=>{
     var add_item = document.getElementById("book-list");
     var new_item = document.createElement("li");
     new_item.textContent = document.getElementById("title").value+ "   " + "   " + document.getElementById("author").value;
@@ -13,9 +13,13 @@ btn_click.addEventListener("click", function() {
 });
 
 var remove_btn = document.getElementById("book-list");
-remove_btn.addEventListener("click", function(e) {
+remove_btn.addEventListener("click", e =>{
     if(e.target.className == "btn btn-danger btn-sm float-end") {
         var li = e.target.parentElement;
         remove_btn.removeChild(li);
     }
+});
+
+$("#book-list").on("click", ".btn-danger", ()=>{
+    $(this).parent().remove();
 });

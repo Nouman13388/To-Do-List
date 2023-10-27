@@ -20,6 +20,9 @@ remove_btn.addEventListener("click", e =>{
     }
 });
 
+
+// jquery code
+
 $("#book-list").on("click", ".btn-danger", ()=>{
     $(this).parent().remove();
 });
